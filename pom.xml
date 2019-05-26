@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
+
+    <groupId>com.github.Alex-2713-GitHub</groupId>
+    <artifactId>common-util</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0.beta</version>
+
+    <name>工具包</name>
+
+    <modules>
+        <module>extension-poi</module>
+    </modules>
+
+    <properties>
+        <project.version>1.0.0.beta</project.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- mvn clean deploy -DskipTests -P sonatype-oss-release -Darguments="gpg.passphrase=Hu_242293_0713_passwd" -->
+    <!-- mvn clean deploy -DskipTests -P sonatype-oss-release -Darguments="gpg.passphrase=Alex_0713_passwd" -->
+
+    <!-- 许可信息 -->
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License Version 3</name>
+            <url>http://www.gnu.org/licenses/lgpl.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>Alex-2713</name>
+            <email>Alex_2713_Office@163.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <tag>v${project.version}</tag>
+        <url>https://github.com/Alex-2713-GitHub/Alex-Cloud.git</url>
+        <connection>scm:git:https://github.com/Alex-2713-GitHub/Alex-Cloud.git</connection>
+        <developerConnection>scm:git:https://github.com/Alex-2713-GitHub/Alex-Cloud.git</developerConnection>
+    </scm>
+</project>
